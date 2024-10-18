@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://cusjschpkbrbh"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_5i0gs"]
+[ext_resource type="Texture2D" uid="uid://cns3h70ukvh31" path="res://Sprites/punt.png" id="2_8p4mf"]
+
+[node name="main" type="Node2D"]
+script = ExtResource("1_5i0gs")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.392157)
+position = Vector2(980, 540)
+scale = Vector2(100, 0.25)
+texture = ExtResource("2_8p4mf")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.392157)
+position = Vector2(960, 595.035)
+rotation = 1.5708
+scale = Vector2(60.704, 0.25)
+texture = ExtResource("2_8p4mf")
