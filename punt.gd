@@ -4,7 +4,7 @@ class_name punt
 
 var particulas: CPUParticles2D
 
-const v := 1
+
 
 var vel: Vector2
 var pos: Vector2
@@ -34,7 +34,7 @@ func _process(delta: float) -> void:
 		queue_free()
 	eliminarSiLluny()
 	vel = Main.principal(pos[0],pos[1], 50)
-	pos = pos + vel*delta*v
+	pos = pos + vel*delta
 	tvida = tvida +1
 	modulate.a = 1-float(tvida)/fade
 	position = Main.retornarCoords(pos)

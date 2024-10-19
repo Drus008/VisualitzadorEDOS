@@ -1,20 +1,50 @@
-[gd_scene load_steps=3 format=3 uid="uid://cusjschpkbrbh"]
+[gd_scene load_steps=5 format=3 uid="uid://cusjschpkbrbh"]
 
 [ext_resource type="Script" path="res://main.gd" id="1_5i0gs"]
 [ext_resource type="Texture2D" uid="uid://cns3h70ukvh31" path="res://Sprites/punt.png" id="2_8p4mf"]
+[ext_resource type="Script" path="res://eje_x.gd" id="3_isqvj"]
+[ext_resource type="Script" path="res://interaccion.gd" id="3_qiod3"]
 
 [node name="main" type="Node2D"]
 script = ExtResource("1_5i0gs")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="EjeX" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0.392157)
 position = Vector2(980, 540)
 scale = Vector2(100, 0.25)
 texture = ExtResource("2_8p4mf")
+script = ExtResource("3_isqvj")
 
-[node name="Sprite2D2" type="Sprite2D" parent="."]
+[node name="EjeY" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0.392157)
 position = Vector2(960, 595.035)
 rotation = 1.5708
 scale = Vector2(60.704, 0.25)
 texture = ExtResource("2_8p4mf")
+script = ExtResource("3_isqvj")
+
+[node name="Interaccion" type="Node" parent="."]
+script = ExtResource("3_qiod3")
+
+[node name="Window" type="Window" parent="."]
+title = "Config"
+initial_position = 3
+size = Vector2i(500, 500)
+current_screen = 1
+
+[node name="Camera2D" type="Camera2D" parent="Window"]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Window/Camera2D"]
+offset_right = 40.0
+offset_bottom = 40.0
+size_flags_horizontal = 4
+alignment = 1
+
+[node name="Label" type="Label" parent="Window/Camera2D/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+text = "Velocidad"
+
+[node name="HScrollBar" type="HScrollBar" parent="Window/Camera2D/VBoxContainer"]
+layout_mode = 2
